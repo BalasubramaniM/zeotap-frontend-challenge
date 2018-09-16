@@ -1,37 +1,54 @@
-## Welcome to GitHub Pages
+# Zeotap Frontend Challenge
 
-You can use the [editor on GitHub](https://github.com/BalasubramaniM/zeotap-frontend-challenge/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+Assignment for Zeotap Frontend Developer Hiring Challenge.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+### Prerequisites
 
-### Markdown
+#### Dependencies
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+-   [Node.js & NPM](https://www.npmjs.com/package/download)
+-   [gh-pages](https://www.npmjs.com/package/gh-pages)
+-   [history](https://www.npmjs.com/package/history)
+-   [nprogress](https://www.npmjs.com/package/nprogress)
+-   [react](https://www.npmjs.com/package/react)
+-   [react-dom](https://www.npmjs.com/package/react-dom)
+-   [react-redux](https://www.npmjs.com/package/react-redux)
+-   [react-router-dom](https://www.npmjs.com/package/react-router-dom)
+-   [react-router-redux](https://www.npmjs.com/package/react-router-redux)
+-   [react-scripts](https://www.npmjs.com/package/react-scripts)
+-   [react-select](https://www.npmjs.com/package/react-select)
+-   [redux](https://www.npmjs.com/package/redux)
+-   [redux-logger](https://www.npmjs.com/package/redux-logger)
+-   [superagent](https://www.npmjs.com/package/superagent)
+-   [superagent-promise](https://www.npmjs.com/package/superagent-promise)
 
-```markdown
-Syntax highlighted code block
+### Installing
 
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+```
+git clone git@github.com:BalasubramaniM/zeotap-frontend-challenge.git
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+And repeat
 
-### Jekyll Themes
+```
+cd zeotap-frontend-challenge
+npm install
+```
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/BalasubramaniM/zeotap-frontend-challenge/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+Finally,
 
-### Support or Contact
+```
+npm start
+```
 
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+## Getting Started
+
+Open `[localhost:3000](http://localhost:3000)` file in your browser and see how Zeotap frontend app works.
+
+## Authors
+
+-   **Balasubramani M** - _Initial work_ - [Balasubramani M](https://github.com/balasubramanim)
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
