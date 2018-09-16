@@ -1,6 +1,6 @@
 # Zeotap Frontend Challenge
 
-Assignment for Zeotap Frontend Developer Hiring Challenge.
+Assignment for Zeotap Frontend Developer Hiring Challenge. This application was built using [create-react-app](https://github.com/facebook/create-react-app) and with [Redux](https://redux.js.org/).
 
 ### Prerequisites
 
@@ -43,7 +43,7 @@ npm start
 
 ## Getting Started
 
-Open `[localhost:3000](http://localhost:3000)` file in your browser and see how Zeotap frontend app works.
+Open [localhost:3000](http://localhost:3000) file in your browser and see how Zeotap frontend app works.
 
 ## Authors
 
