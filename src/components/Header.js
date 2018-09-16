@@ -44,8 +44,10 @@ class Header extends React.Component {
     };
 
     render() {
+        // Advertisers options.
         let advertiserOptions = [];
 
+        // Default timeline options.
         const timelineOptions = [
             {
                 value: 0,

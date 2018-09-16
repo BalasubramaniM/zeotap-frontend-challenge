@@ -3,6 +3,7 @@ import _superagent from "superagent";
 
 const superagent = superagentPromise(_superagent, global.Promise);
 
+// API to fetch data.
 const API_ROOT = "http://hck.re/qmPuPD";
 
 const responseBody = res => res.body;

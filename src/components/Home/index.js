@@ -6,14 +6,23 @@ const mapStateToProps = state => ({
 });
 
 class Header extends React.Component {
-    getTodayDate = () => {
-        let currentDate = new Date();
-        let day = currentDate.getDate();
-        let month = currentDate.getMonth() + 1;
-        let year = currentDate.getFullYear();
-        return day + "-" + month + "-" + year;
+    changeDateFormat = value => {
+        if (value === null) {
+            return null;
+        }
+
+        let val = value.split(/\-/);
+        return val[2] + "-" + val[1] + "-" + val[0];
     };
 
+    /**
+     * Get the filtered data.
+     * Filter array of data specific to Advertisers.
+     * Map array of filtered data to get specific Campaigns related to Advertisers.
+     * Finally, sort them using the budget of the campaign (from higher to lower).
+     * @param  {Array} data [Array of data.]
+     * @return {Arrayt}     [Filtered array.]
+     */
     getFilteredData = data => {
         return (
             data
@@ -45,16 +54,25 @@ class Header extends React.Component {
     getTimelineFilteredData = data => {
         switch (this.props.timeline.value) {
             case "Today":
-                let today = this.getTodayDate();
-                return data.filter(val => val.startDate === today);
+                let today = new Date().toISOString().slice(0, 10);
+                return data.filter(
+                    val => this.changeDateFormat(val.startDate) === today
+                );
 
             case "Last 7 days":
-                let todayISO = new Date().toISOString().slice(0, 10);
                 let d = new Date();
                 d.setDate(d.getDate() - 7);
                 let lastWeekISO = d.toISOString().slice(0, 10);
 
-                return data.filter(val => val.startDate === today);
+                lastWeekISO = new Date(lastWeekISO);
+
+                return data.filter(val => {
+                    let properDate = new Date(
+                        this.changeDateFormat(val.startDate)
+                    );
+
+                    return properDate > lastWeekISO;
+                });
 
             default:
                 return data;
@@ -68,8 +86,6 @@ class Header extends React.Component {
                 let data = this.props.data;
 
                 campaigners = this.getFilteredData(data);
-
-                console.log(campaigners);
 
                 // Check whether timeline is set.
                 if (this.props.timeline.key !== -1) {
