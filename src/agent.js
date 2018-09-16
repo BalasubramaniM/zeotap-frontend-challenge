@@ -8,13 +8,13 @@ const API_ROOT = "http://hck.re/qmPuPD";
 const responseBody = res => res.body;
 
 const requests = {
-    get: url => superagent.get(`${API_ROOT}${url}`).then(responseBody)
+	get: url => superagent.get(`${API_ROOT}${url}`).then(responseBody)
 };
 
 const Home = {
-    all: () => requests.get("/")
+	all: () => requests.get("/")
 };
 
 export default {
-    Home
+	Home
 };
