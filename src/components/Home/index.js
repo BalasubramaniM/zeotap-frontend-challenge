@@ -47,6 +47,15 @@ class Header extends React.Component {
             case "Today":
                 let today = this.getTodayDate();
                 return data.filter(val => val.startDate === today);
+
+            case "Last 7 days":
+                let todayISO = new Date().toISOString().slice(0, 10);
+                let d = new Date();
+                d.setDate(d.getDate() - 7);
+                let lastWeekISO = d.toISOString().slice(0, 10);
+
+                return data.filter(val => val.startDate === today);
+
             default:
                 return data;
         }

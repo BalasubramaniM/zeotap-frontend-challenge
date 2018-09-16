@@ -45,6 +45,10 @@ npm start
 
 Open [localhost:3000](http://localhost:3000) file in your browser and see how Zeotap frontend app works.
 
+## Demo
+
+Preview of the application can be found at [balsu.me/zeotap-frontend-challenge](http://balsu.me/zeotap-frontend-challenge/).
+
 ## Authors
 
 -   **Balasubramani M** - _Initial work_ - [Balasubramani M](https://github.com/balasubramanim)
